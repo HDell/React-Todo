@@ -3,13 +3,12 @@
  */
 
 import React from 'react';
-import './Todo.css';
 
 class Todo extends React.Component {
     render() {
         return (
             <div
-                className={`todo${this.props.todo.completed? ' completed' : ''}`}
+                className={`todo${this.props.todo.completed? ' completed' : ''}`} //className = todo completed || todo
                 onClick={() => this.props.toggleComplete(this.props.todo.id)}
             >
                 <p>{this.props.todo.task}</p>

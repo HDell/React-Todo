@@ -9,11 +9,7 @@ import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
 const todos = [
-  {
-    task: 'Sample Text 1',
-    id: 1,
-    completed: false
-  }
+
 ];
 
 class App extends React.Component {
@@ -57,12 +53,18 @@ class App extends React.Component {
     });
   };
 
+  clearCompleted = () => {
+    this.setState({
+      todoList: this.state.todoList.filter((elem) => !elem.completed)
+    })
+  };
+
   render() {
     return (
-      <div>
+      <div className="main-app">
         <h2>Welcome to your Todo App!</h2>
         <TodoList todos={this.state.todoList} toggleComplete={this.toggleComplete}/>
-        <TodoForm addTodo={this.addTodo} />
+        <TodoForm addTodo={this.addTodo} clearCompleted={this.clearCompleted} />
       </div>
     );
   }
