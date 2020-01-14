@@ -1,0 +1,6 @@
+.todo {
+
+}
+.todo.completed {
+    text-decoration: line-through;
+}
