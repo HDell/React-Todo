@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Ubuntu', sans-serif;
+}
+.main-app {
+
+}
+.todo {
+
+}
+.todo.completed {
+    text-decoration: line-through;
+}
+.todo-list {
+
+}
+.todo-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    margin-top: 1%;
+    width: 15%;
+}
+button:hover {
+    background-color: gold;
+}
+input {
+    width: 20%;
+}
